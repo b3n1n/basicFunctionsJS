@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. Сделайте функцию, которая принимает параметром число от 1 до 7, а возвращает день недели на Анг. языке.
+      function whatDayOfTheWeek(dayNumber) {
+        var days = [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ];
+        document.writeln(days[dayNumber]);
+      }
+      var monday = 1;
+      whatDayOfTheWeek(monday);
+
+      document.writeln("<hr>");
+      // 2. Создайте функцию, которая будет заполнять массив 10-ю иксами с помощью цикла.
+      var array = [];
+      function fillArrayWithX(array) {
+        for (let i = 0; i < 11; i++) {
+          array[i] = "x";
+        }
+      }
+      fillArrayWithX(array);
+      document.writeln(array.join(" "));
+      document.writeln("<hr>");
+      // 3. Если переменная a больше нуля - то в ggg запишем функцию, которая выводит один !, иначе запишем функцию, которая выводит два !
+
+      var ggg;
+      var a = -1;
+      if (a > 0) {
+        ggg = () => {
+          document.writeln("!");
+        };
+      } else {
+        ggg = () => {
+          document.writeln("!!");
+        };
+      }
+      ggg();
+
+      document.writeln("<hr>");
+      // 4. Функция ggg принимает 2 параметра: анонимную функцию, которая возвращает 3 и анонимную функцию, которая возвращает 4. Верните результатом функции ggg сумму 3 и 4.
+      ggg = (arg1, arg2) => {
+        return arg1 + arg2;
+      };
+
+      returnThree = () => {
+        return 3;
+      };
+
+      returnFour = () => {
+        return 4;
+      };
+      document.writeln(ggg(returnThree(), returnFour()));
+
+      document.writeln("<hr>");
+      // 5. Сделайте функцию, которая считает и выводит количество своих вызовов.
+      var count = 0;
+
+      function CountMySelf() {
+        ++count;
+        document.writeln("I counted myself: " + count + " times. <br>")
+      }
+
+      CountMySelf();
+      CountMySelf();
+      CountMySelf();
+    </script>
+  </body>
+</html>
